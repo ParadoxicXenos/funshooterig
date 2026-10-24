@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://bko7ao42envmk"]
+
+[ext_resource type="PackedScene" uid="uid://b204ays01feo8" path="res://Scenes/player.tscn" id="1_tumq0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tumq0"]
+sky_top_color = Color(0.25812408, 0.45974648, 0.68211806, 1)
+sky_horizon_color = Color(0.5707383, 0.665203, 0.6668558, 1)
+ground_bottom_color = Color(0.03952369, 0.21576005, 0, 1)
+ground_horizon_color = Color(0.5707383, 0.665203, 0.6668558, 1)
+
+[sub_resource type="Sky" id="Sky_k5f4k"]
+sky_material = SubResource("ProceduralSkyMaterial_tumq0")
+
+[sub_resource type="Environment" id="Environment_6phgx"]
+background_mode = 2
+sky = SubResource("Sky_k5f4k")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=464211386]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1886780189]
+environment = SubResource("Environment_6phgx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=372560449]
+transform = Transform3D(-0.8660254, -0.035748724, 0.49872044, 0, 0.99744076, 0.07149744, -0.50000006, 0.061918598, -0.863809, 0, 0, 0)
+light_color = Color(1, 0.8509804, 0.7411765, 1)
+light_energy = 5.75
+shadow_enabled = true
+directional_shadow_max_distance = 273.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1362878469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1761322, 4.7393494, 0)
+use_collision = true
+size = Vector3(17.832123, 10.478699, 1)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=271711527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1682577, 4.206254, 4.2089453)
+use_collision = true
+size = Vector3(14.352722, 11.388214, 0.9765625)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1662664195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.930237, -10.5)
+use_collision = true
+size = Vector3(1, 10.860474, 14)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=1871733275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.605484, 5.718581, -2.2957058)
+use_collision = true
+size = Vector3(1.0907288, 10.860474, 30.241943)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="." unique_id=206814903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.705624, 5.549013, -18.168987)
+use_collision = true
+size = Vector3(24.933949, 10.860474, 3.086792)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=760037107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.5, -11.5)
+use_collision = true
+size = Vector3(10, 2, 12)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=756464924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.109486, 5.3099327, -10.058855)
+use_collision = true
+size = Vector3(24.124512, 1, 20)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=1624344797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.163857, 5.3131123, -5.561571)
+use_collision = true
+size = Vector3(18.014282, 1, 20)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="." unique_id=1126689130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5901814, 0.04949379, -3.112156)
+use_collision = true
+size = Vector3(64.02219, 1, 36.021973)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=1948978353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.051094, 10.460396, -4.1796)
+use_collision = true
+size = Vector3(55.228592, 1.3502808, 31.103989)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1778369942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.868164, 0, -5.5)
+use_collision = true
+size = Vector3(3.2636719, 3, 12)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1430755159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.868776, 1.2170603, -4.3481603)
+use_collision = true
+size = Vector3(3.21875, 2.404419, 9.607422)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1514567357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8819094, 2.235848, -3.350132)
+use_collision = true
+size = Vector3(3.2104492, 2.0078735, 6.510742)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=893629641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8935113, 3.3851979, -1.5415564)
+use_collision = true
+size = Vector3(3.1875, 2.0078735, 3.7485352)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1353290503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.298558, 4.1144557, -1.0641227)
+use_collision = true
+size = Vector3(1.9776611, 2.0078735, 2.628662)
+
+[node name="CharacterBody3D" parent="." unique_id=285945808 instance=ExtResource("1_tumq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.351821, 6.9773226, -2.9853811)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=324014448]
+transform = Transform3D(1, 0, 0, 0, 0.01554601, 0.9998792, 0, -0.9998792, 0.01554601, 12.139833, 4.4081187, -11.926664)
+light_color = Color(1, 0.9098039, 0.7647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.69
+spot_range = 4094.775
+spot_attenuation = 3.66
+spot_angle = 95.47
+spot_angle_attenuation = 20.39297
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D" unique_id=1190417175]
+transform = Transform3D(1, 0, 0, 0, 0.99970704, -0.024208564, 0, 0.024208564, 0.99970704, -9.058817, 3.3291636, 0.20680189)
+light_color = Color(1, 0.9098039, 0.7647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.69
+spot_range = 1.39
+spot_attenuation = 2.15
+spot_angle = 65.07
+spot_angle_attenuation = 7.210014
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D" unique_id=1867722089]
+transform = Transform3D(1, 0, 0, 0, 0.01554601, 0.9998792, 0, -0.9998792, 0.01554601, -16.418009, 4.629092, 2.2857528)
+light_color = Color(1, 0.9098039, 0.7647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.69
+spot_range = 4096.0
+spot_attenuation = 2.15
+spot_angle = 65.07
+spot_angle_attenuation = 7.210014
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D/SpotLight3D2" unique_id=807448243]
+transform = Transform3D(1, 0, 0, 0, 0.044390727, -0.9990144, 0, 0.9990144, 0.044390727, 19.619526, -2.7316365, -7.8471947)
+light_color = Color(1, 0.9098039, 0.7647059, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.69
+spot_range = 4096.0
+spot_attenuation = 2.18
+spot_angle = 116.74
+spot_angle_attenuation = 7.210014
