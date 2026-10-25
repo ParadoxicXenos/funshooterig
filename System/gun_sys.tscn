@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cijevfq3y8vg0"]
+
+[ext_resource type="Script" uid="uid://76amn7aoansl" path="res://System/gun_sys.gd" id="1_4ablc"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g4v7s"]
+
+[node name="GunSys" type="Node" unique_id=1514537860]
+script = ExtResource("1_4ablc")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=53435720]
+one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=478844842]
+stream = SubResource("AudioStreamRandomizer_g4v7s")
+max_distance = 727.33
+
+[node name="FlashTimer" type="Timer" parent="." unique_id=1985622920]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="FlashTimer" to="." method="_on_flash_timer_timeout"]

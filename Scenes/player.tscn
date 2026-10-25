@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://6e5j4nhnwwc5" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Material" uid="uid://tl0h2xd88pff" path="res://Materials/Player.tres" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://cijevfq3y8vg0" path="res://System/gun_sys.tscn" id="2_vgqql"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
 material = ExtResource("2_cvnsp")
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=285945808]
+[node name="player" type="CharacterBody3D" unique_id=285945808]
 floor_stop_on_slope = false
 script = ExtResource("1_v0iea")
+
+[node name="GunSys" parent="." unique_id=1514537860 node_paths=PackedStringArray("parent") instance=ExtResource("2_vgqql")]
+parent = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2031139080]
 shape = SubResource("CapsuleShape3D_g4v7s")
@@ -39,23 +43,15 @@ spot_attenuation = 0.0
 spot_angle = 0.1
 spot_angle_attenuation = 0.08429384
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Camera3D" unique_id=1568399160]
-transform = Transform3D(1, 0, 0, 0, -0.015549077, -0.9998791, 0, 0.9998791, -0.015549077, 0.4881134, -0.49563938, -0.59589803)
-autosmooth = true
-smoothing_angle = 180.0
-size = Vector3(0.09329224, 1, 0.21246338)
-material = ExtResource("2_cvnsp")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/CSGBox3D" unique_id=349479336]
-transform = Transform3D(1, 0, 0, 0, 0.07720489, 0.99701536, 0, -0.99701536, 0.07720489, 0.015383363, -0.44867972, -0.02242405)
-light_color = Color(1, 0, 0, 1)
-light_energy = 17.195
-light_indirect_energy = 0.0
-light_size = 0.099
+[node name="Muzzle_flash" type="SpotLight3D" parent="Camera3D/CSGBox3D2" unique_id=1059899598]
+transform = Transform3D(1, 0, 0, 0, -4.4703484e-08, 1.0000001, 0, -1.0000001, -4.4703484e-08, 0, -0.46454075, 0.030875437)
+light_energy = 0.0
+light_indirect_energy = 16.0
+light_size = 1.0
 spot_range = 4096.0
-spot_attenuation = 0.0
-spot_angle = 0.1
-spot_angle_attenuation = 0.08429384
+spot_attenuation = 10.0
+spot_angle = 180.0
+spot_angle_attenuation = 0.0008107633
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Camera3D" unique_id=739772550]
 transform = Transform3D(1, 0, 0, 0, 0.98859465, -0.15060091, 0, 0.15060091, 0.98859465, 0.02300638, -0.044070005, -0.3510437)
@@ -65,3 +61,8 @@ light_size = 1.0
 spot_range = 4096.0
 spot_angle = 23.58
 spot_angle_attenuation = 6.27667
+
+[node name="BulletRayCast3D" type="RayCast3D" parent="Camera3D" unique_id=926505677]
+transform = Transform3D(-0.44198668, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.4347977, -0.40861166, -1.1110983)
+enabled = false
+collide_with_areas = true

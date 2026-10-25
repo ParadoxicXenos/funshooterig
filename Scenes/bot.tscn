@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d3jl8ma1ju44m"]
 
+[ext_resource type="Script" uid="uid://cufgyu3oye2hw" path="res://Scripts/bot.gd" id="1_pul5b"]
+[ext_resource type="PackedScene" uid="uid://cijevfq3y8vg0" path="res://System/gun_sys.tscn" id="2_gdc2h"]
 [ext_resource type="Material" uid="uid://cknqt7tkhro7u" path="res://Materials/Bot.tres" id="2_pul5b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
@@ -7,8 +9,12 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
 material = ExtResource("2_pul5b")
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=285945808]
+[node name="bot" type="CharacterBody3D" unique_id=285945808]
 floor_stop_on_slope = false
+script = ExtResource("1_pul5b")
+
+[node name="GunSys" parent="." unique_id=1514537860 node_paths=PackedStringArray("parent") instance=ExtResource("2_gdc2h")]
+parent = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2031139080]
 shape = SubResource("CapsuleShape3D_g4v7s")
@@ -17,7 +23,7 @@ shape = SubResource("CapsuleShape3D_g4v7s")
 mesh = SubResource("CapsuleMesh_g4v7s")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=2095300081]
-transform = Transform3D(1, 0, 0, 0, -0.066318125, -0.9977985, 0, 0.9977985, -0.066318125, -0.44174245, 0.1398105, -0.44623083)
+transform = Transform3D(1, 0, 0, 0, -0.06631812, -0.99779844, 0, 0.99779844, -0.06631812, -0.44174245, 0.1398105, -0.44623083)
 autosmooth = true
 smoothing_angle = 180.0
 size = Vector3(0.09329224, 1, 0.21246338)
@@ -34,29 +40,32 @@ spot_attenuation = 0.0
 spot_angle = 0.1
 spot_angle_attenuation = 0.08429384
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1568399160]
-transform = Transform3D(1, 0, 0, 0, -0.015549077, -0.9998791, 0, 0.9998791, -0.015549077, 0.4881134, 0.100238144, -0.4715358)
-autosmooth = true
-smoothing_angle = 180.0
-size = Vector3(0.09329224, 1, 0.21246338)
-material = ExtResource("2_pul5b")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="CSGBox3D" unique_id=349479336]
-transform = Transform3D(1, 0, 0, 0, 0.07720489, 0.99701536, 0, -0.99701536, 0.07720489, 0.015383363, -0.44867972, -0.02242405)
-light_color = Color(1, 0, 0, 1)
-light_energy = 17.195
-light_indirect_energy = 0.0
-light_size = 0.099
-spot_range = 4096.0
-spot_attenuation = 0.0
-spot_angle = 0.1
-spot_angle_attenuation = 0.08429384
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=739772550]
-transform = Transform3D(1, 0, 0, 0, 0.98859465, -0.15060091, 0, 0.15060091, 0.98859465, 0.02300638, 0.5518075, -0.22668147)
-light_color = Color(0.9999984, 0.72679406, 0.26292816, 1)
-light_energy = 0.842
+[node name="Muzzle_flash" type="SpotLight3D" parent="CSGBox3D2" unique_id=1059899598]
+transform = Transform3D(1, 0, 0, 0, -4.4703484e-08, 1.0000001, 0, -1.0000001, -4.4703484e-08, 0, -0.46454075, 0.030875437)
+light_energy = 0.0
+light_indirect_energy = 16.0
 light_size = 1.0
 spot_range = 4096.0
-spot_angle = 8.33
-spot_angle_attenuation = 1.999998
+spot_attenuation = 10.0
+spot_angle = 180.0
+spot_angle_attenuation = 0.0008107633
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CSGBox3D2" unique_id=739772550]
+transform = Transform3D(1, 0, 0, 0, 0.084707625, 0.99640596, 0, -0.99640596, 0.084707625, 0.46474883, 0.1917432, -0.42565018)
+light_color = Color(0.9999984, 0.72679406, 0.26292816, 1)
+light_energy = 0.0
+light_size = 1.0
+spot_range = 4096.0
+spot_angle = 23.58
+spot_angle_attenuation = 6.27667
+
+[node name="BulletRayCast3D" type="RayCast3D" parent="CSGBox3D2" unique_id=926505677]
+transform = Transform3D(-0.44198668, 0, 0, 0, 0.9977986, 0.06631809, 0, -0.06631809, 0.9977986, 0.006944746, -0.54246247, -0.011505604)
+enabled = false
+collide_with_areas = true
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1158189576]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.1883773, 0)
+text = "Health"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1363531760]

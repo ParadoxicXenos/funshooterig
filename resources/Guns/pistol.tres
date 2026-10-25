@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="laser" format=3 uid="uid://cwxou34kvk8ji"]
+
+[ext_resource type="AudioStream" uid="uid://cuwjfr5g5u5x6" path="res://SFX/dryfire/Microsoft Windows XP Error - Sound Effect (HD).mp3" id="1_yvauu"]
+[ext_resource type="AudioStream" uid="uid://cgnsj2krqkxj0" path="res://SFX/Laser/SciFiSounds_LaserZap_01.wav" id="2_a4d2m"]
+[ext_resource type="Script" uid="uid://d2i4b2vqrabtc" path="res://resources/laser.gd" id="2_baym2"]
+[ext_resource type="AudioStream" uid="uid://ceu1avsspf06u" path="res://SFX/Laser/SciFiSounds_LaserZap_02.wav" id="3_wfmek"]
+[ext_resource type="AudioStream" uid="uid://vkljgedngw88" path="res://SFX/Laser/SciFiSounds_LaserZap_03.wav" id="4_rl1w1"]
+[ext_resource type="AudioStream" uid="uid://jbfj36282sw8" path="res://SFX/Laser/SciFiSounds_LaserZap_04.wav" id="5_awjc6"]
+[ext_resource type="AudioStream" uid="uid://taospj7aw6fh" path="res://SFX/Laser/SciFiSounds_LaserZap_05.wav" id="6_vr3f0"]
+[ext_resource type="AudioStream" uid="uid://cx5uff4jx7wc6" path="res://SFX/Laser/SciFiSounds_LaserZap_06.wav" id="7_mpifo"]
+[ext_resource type="AudioStream" uid="uid://dbx14i6vwg5io" path="res://SFX/Laser/SciFiSounds_LaserZap_07.wav" id="8_cxmcc"]
+[ext_resource type="AudioStream" uid="uid://xeweioeransp" path="res://SFX/Laser/SciFiSounds_LaserZap_08.wav" id="9_hme21"]
+[ext_resource type="AudioStream" uid="uid://dsxu2w0i4525a" path="res://SFX/Laser/SciFiSounds_LaserZap_09.wav" id="10_tplxy"]
+[ext_resource type="AudioStream" uid="uid://b1t4xjghyvnun" path="res://SFX/Laser/SciFiSounds_LaserZap_10.wav" id="11_nw84l"]
+[ext_resource type="AudioStream" uid="uid://e8n1j45jw3gl" path="res://SFX/Laser/SciFiSounds_LaserZap_11.wav" id="12_msv5w"]
+[ext_resource type="AudioStream" uid="uid://d3w5ydf5p2ypn" path="res://SFX/Laser/SciFiSounds_LaserZap_12.wav" id="13_887mq"]
+[ext_resource type="AudioStream" uid="uid://dsl6g5r2deilp" path="res://SFX/Laser/SciFiSounds_LaserZap_13.wav" id="14_tupil"]
+[ext_resource type="AudioStream" uid="uid://n0inkql4ttck" path="res://SFX/Laser/SciFiSounds_LaserZap_14.wav" id="15_6m6js"]
+[ext_resource type="AudioStream" uid="uid://cuv0yuhbsrbi1" path="res://SFX/Laser/SciFiSounds_LaserZap_15.wav" id="16_vhui3"]
+[ext_resource type="AudioStream" uid="uid://c3hlr4w047i4c" path="res://SFX/Laser/SciFiSounds_LaserZap_16.wav" id="17_idxmf"]
+[ext_resource type="AudioStream" uid="uid://ctbf8beqwqhus" path="res://SFX/Laser/SciFiSounds_LaserZap_17.wav" id="18_1ohln"]
+[ext_resource type="AudioStream" uid="uid://dnk6u60dxkkgf" path="res://SFX/Laser/SciFiSounds_LaserZap_18.wav" id="19_sinsx"]
+[ext_resource type="AudioStream" uid="uid://btplvpfoyb0dv" path="res://SFX/Laser/SciFiSounds_LaserZap_19.wav" id="20_ik76a"]
+[ext_resource type="AudioStream" uid="uid://bi5uq03xrhot0" path="res://SFX/Laser/SciFiSounds_LaserZap_20.wav" id="21_scmj1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ekb18"]
+size = Vector3(0.1, 0.3, 0.3)
+
+[resource]
+script = ExtResource("2_baym2")
+type = 1
+ammo = "pistol"
+mesh = SubResource("BoxMesh_ekb18")
+cooldown = 0.3
+sway = 0.2
+auto = true
+firing_sounds = Array[AudioStream]([ExtResource("2_a4d2m"), ExtResource("3_wfmek"), ExtResource("4_rl1w1"), ExtResource("5_awjc6"), ExtResource("6_vr3f0"), ExtResource("7_mpifo"), ExtResource("8_cxmcc"), ExtResource("9_hme21"), ExtResource("10_tplxy"), ExtResource("11_nw84l"), ExtResource("12_msv5w"), ExtResource("13_887mq"), ExtResource("14_tupil"), ExtResource("15_6m6js"), ExtResource("16_vhui3"), ExtResource("17_idxmf"), ExtResource("18_1ohln"), ExtResource("19_sinsx"), ExtResource("20_ik76a"), ExtResource("21_scmj1")])
+damage = 23
+spread = 0.01
+max_mag = 25
+bullet_range = 69
+metadata/_custom_type_script = "uid://d2i4b2vqrabtc"
