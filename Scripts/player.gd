@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed = 5
+var light = 16.0
 var sprint_speed = 7
 var jump_speed = 5
 var mouse_sensitivity = 0.002
@@ -15,11 +16,17 @@ func _input(event):
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 		
 func _physics_process(delta):		
+	$Camera3D/CSGBox3D2/SpotLight3D.light_energy = light
+	$Camera3D/CSGBox3D/SpotLight3D.light_energy = light
+	$Camera3D/SpotLight3D2.light_energy = light
 	if Input.is_action_pressed("escape") == true && Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if Input.is_action_pressed("Click") == true && Input.mouse_mode==Input.MOUSE_MODE_VISIBLE:
 		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
-		
+	if Input.is_action_pressed("light") == true:
+		light = 0.0
+	else:
+		light = 16.0
 		
 	velocity.y += -gravity * delta
 	

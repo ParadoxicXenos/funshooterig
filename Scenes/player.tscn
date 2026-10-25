@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://b204ays01feo8"]
 
 [ext_resource type="Script" uid="uid://6e5j4nhnwwc5" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Material" uid="uid://tl0h2xd88pff" path="res://Materials/Player.tres" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+material = ExtResource("2_cvnsp")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=285945808]
 floor_stop_on_slope = false
@@ -24,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, -0.066318125, -0.9977985, 0, 0.9977985, -0.0
 autosmooth = true
 smoothing_angle = 180.0
 size = Vector3(0.09329224, 1, 0.21246338)
+material = ExtResource("2_cvnsp")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/CSGBox3D2" unique_id=693405390]
 transform = Transform3D(1, 0, 0, 0, -4.4703484e-08, 1.0000001, 0, -1.0000001, -4.4703484e-08, 0, -0.47253916, 0.031407043)
@@ -41,6 +44,7 @@ transform = Transform3D(1, 0, 0, 0, -0.015549077, -0.9998791, 0, 0.9998791, -0.0
 autosmooth = true
 smoothing_angle = 180.0
 size = Vector3(0.09329224, 1, 0.21246338)
+material = ExtResource("2_cvnsp")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/CSGBox3D" unique_id=349479336]
 transform = Transform3D(1, 0, 0, 0, 0.07720489, 0.99701536, 0, -0.99701536, 0.07720489, 0.015383363, -0.44867972, -0.02242405)
@@ -56,8 +60,8 @@ spot_angle_attenuation = 0.08429384
 [node name="SpotLight3D2" type="SpotLight3D" parent="Camera3D" unique_id=739772550]
 transform = Transform3D(1, 0, 0, 0, 0.98859465, -0.15060091, 0, 0.15060091, 0.98859465, 0.02300638, -0.044070005, -0.3510437)
 light_color = Color(0.9999984, 0.72679406, 0.26292816, 1)
-light_energy = 0.842
+light_energy = 0.0
 light_size = 1.0
 spot_range = 4096.0
-spot_angle = 8.33
-spot_angle_attenuation = 1.999998
+spot_angle = 23.58
+spot_angle_attenuation = 6.27667
