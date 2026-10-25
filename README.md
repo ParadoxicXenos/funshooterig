@@ -2,6 +2,9 @@
 
 Fun laser shooter game (is a work in progress)
 =
+How to run:  
+Open this [link](https://paradoxicxenos.itch.io/funshooterig)
+then press play!
   
 WASD to move  
 1,2,3,4 for weapon selection  
