@@ -2,6 +2,10 @@
 
 Fun laser shooter game (is a work in progress)
 =
+I made this game using godot, and have made everything myself, avoiding tutorials everywhere except for the weapon system.
+Its been made using godot, and i plan to work on this over the next few weeks, and I've always thought that making games was a cool idea, so i thought why not make one! The bot is very rough currently, i plan on fixing the nav next!
+
+
 How to run:  
 Open this [link](https://paradoxicxenos.itch.io/funshooterig)
 then press play!
